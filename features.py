@@ -33,7 +33,8 @@ def features(code):
         'comment ratio': comment_r,
         'line length': avg_l_len,
         'indent variations': indent_var,
-        'functions': num_funcs
+        'functions': num_funcs,
+        "code": code
     }
 
 if not os.path.isdir(human_dataset):
