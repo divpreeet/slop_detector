@@ -1,11 +1,12 @@
+#python feature extraction
 import os
 import csv
 import ast
 import re
 
-ai_dataset = 'dataset/ai'
-human_dataset = 'dataset/human'
-csv_path = 'dataset/features.csv'
+ai_dataset = 'dataset/python/ai'
+human_dataset = 'dataset/python/human'
+csv_path = 'dataset/python.csv'
 
 def features(code):
     lines = code.splitlines()

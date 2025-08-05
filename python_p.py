@@ -1,3 +1,5 @@
+# python prediction
+
 import sys
 import pandas as pd
 import joblib
@@ -35,8 +37,6 @@ def features(code):
         "code": code
     }
 
-if len(sys.argv) != 2:
-    sys.exit(1)
 
 file_path = sys.argv[1]
 with open(file_path, encoding='utf-8') as f:
@@ -55,7 +55,7 @@ renamed = {
 
 df = pd.DataFrame([renamed])
 
-pipeline = joblib.load('model.pkl')
+pipeline = joblib.load('python.pkl')
 
 prediction = pipeline.predict(df)[0]
 

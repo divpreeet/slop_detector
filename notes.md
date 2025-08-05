@@ -13,6 +13,14 @@ also i got 410 samples each, for AI and human, scraped github for human, and use
 # prediction
 its prety simple, it extracts the feature from the code, and then pipes the model and uses joblib to load it! and then gets the prediction!
 
+# scraper - updated
+made it so we dont get 404 errors, list time i was construction a raw file url and then returning the code from there, turns out github has a search api which returns the base64 code, which you need to decode and then download!
 
-# todo
-add html, css, js.
+
+# adding multiple language support
+adding html support next, needed to change filenmames to stuff like ```python_f.py``` for feature extraction for python, need to really clean up the folder struct, really just reusing code at this point.
+
+# html support
+scraped 400 human samples from github, getting human samples isnt a problem, its seamless, ai smaples are a problem, got 200 from gemini, and the rest were from chatgpt 4.1, turns out if you have github edu, gpt 4.1 is free on gh copliot! trained the model, and it gets 97% accuracy!
+
+needed to use AI to get a better result, since if prompted, you can easily pass the detector, even after using AI (and tons of fixing ai code), its still pretty dodgy and isnt that reliable, ig its because of the lack of proper data, and i currently wont be able to solve that without paying for an AI service, so ig, HTML detection would be marked as a rough estimate, and it can be pretty dodgy.
