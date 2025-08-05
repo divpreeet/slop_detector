@@ -82,39 +82,6 @@ with open(file_path, encoding='utf-8') as f:
     code = f.read()
 
 features = features(code)
-# renamed = {
-#         'lines': features['num_lines'],
-#         'blanks': features['num_blanks'],
-#         'html_comments': features['num_html_comments'],
-#         'avg_line_length': features['avg_line_length'],
-#         'indent_variations': features['indent_var'],
-#         'tags': features['num_tags'],
-#         'unique_tags': features['tag_types'],
-#         'semantic_tags': features['semantic_tags'],
-#         'imgs': features['num_img'],
-#         'links': features['num_links'],
-#         'forms': features['num_forms'],
-#         'scripts': features['num_scripts'],
-#         'styles': features['num_styles'],
-#         'css_rules': features['num_css_rules'],
-#         'classes': features['num_classes'],
-#         'unique_classes': features['unique_classes'],
-#         'use_flexbox': features['use_flexbox'],
-#         'use_grid': features['use_grid'],
-#         'emoji_count': features['emoji_count'],
-#         'meta_tags': features['meta_tags'],
-#         'external_links': features['external_links'],
-#         'aria_count': features['aria_count'],
-#         'data_attr_count': features['data_attr_count'],
-#         'button_count': features['button_count'],
-#         'favicon': features['favicon'],
-#         'google_fonts': features['google_fonts'],
-#         'inline_events': features['inline_events'],
-#         'minified': features['minified'],
-#         'ai_keywords': features["ai_keywords"],
-#         'code': features['code'],
-# }
-
 df = pd.DataFrame([features])
 
 pipeline = joblib.load('html.pkl')
