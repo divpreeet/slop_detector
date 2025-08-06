@@ -24,3 +24,5 @@ adding html support next, needed to change filenmames to stuff like ```python_f.
 scraped 400 human samples from github, getting human samples isnt a problem, its seamless, ai smaples are a problem, got 200 from gemini, and the rest were from chatgpt 4.1, turns out if you have github edu, gpt 4.1 is free on gh copliot! trained the model, and it gets 97% accuracy!
 
 needed to use AI to get a better result, since if prompted, you can easily pass the detector, even after using AI (and tons of fixing ai code), its still pretty dodgy and isnt that reliable, ig its because of the lack of proper data, and i currently wont be able to solve that without paying for an AI service, so ig, HTML detection would be marked as a rough estimate, and it can be pretty dodgy.
+
+ended up removing html support, since its really finnicky, and unreliable, instead i am adding js support
