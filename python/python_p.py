@@ -55,7 +55,7 @@ renamed = {
 
 df = pd.DataFrame([renamed])
 
-pipeline = joblib.load('python.pkl')
+pipeline = joblib.load('models/python.pkl')
 prediction = pipeline.predict(df)[0]
 prob = pipeline.predict_proba(df)[0]
 

@@ -4,9 +4,11 @@ import csv
 import ast
 import re
 
-ai_dataset = 'dataset/python/ai'
-human_dataset = 'dataset/python/human'
-csv_path = 'dataset/python.csv'
+root = os.path.dirname(os.path.dirname(__file__)) 
+
+ai_dataset = os.path.join(root, 'dataset', 'python', 'ai')
+human_dataset = os.path.join(root, 'dataset', 'python', 'human')
+csv_path = os.path.join(root, 'dataset', 'python.csv')
 
 def features(code):
     lines = code.splitlines()

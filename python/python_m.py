@@ -1,5 +1,5 @@
 # python model
-
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -10,8 +10,11 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 import joblib
 
+root = os.path.dirname(os.path.dirname(__file__)) 
+
 # dataframe
-df = pd.read_csv('dataset/python.csv')
+df_path = os.path.join(root, 'dataset', 'python.csv')
+df = pd.read_csv(df_path)
 
 df = df.rename(columns={
     'lines': "num_l",
@@ -51,4 +54,4 @@ y_pred = pipeline.predict(X_test)
 
 print(classification_report(Y_test, y_pred))
 
-joblib.dump(pipeline, 'python.pkl')
+joblib.dump(pipeline, 'models/python.pkl')
