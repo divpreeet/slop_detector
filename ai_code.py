@@ -6,7 +6,6 @@ import re
 # adding path so its less tedious to change the path
 path = "dataset/js/ai"
 os.makedirs('dataset/js/ai', exist_ok=True)
-ai.configure(api_key="AIzaSyDhyFVGa6E2eP8BMVp0j4P1Du9BGX19VMI")
 
 
 # generated this using chatgpt, for html this time, i know there was a better way to do this.
