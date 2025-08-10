@@ -56,12 +56,14 @@ renamed = {
 df = pd.DataFrame([renamed])
 
 pipeline = joblib.load('python.pkl')
-
 prediction = pipeline.predict(df)[0]
+prob = pipeline.predict_proba(df)[0]
 
 if prediction == 1:
     label = "AI"
+    confidence = prob[1] * 100
 else: 
     label = "human"
+    confidence = prob[0] * 100
 
-print(f"{file_path} is written by a {label}")
+print(f"{file_path} is {confidence:.2f}% likely to be {label}")
