@@ -8,7 +8,9 @@ path = "dataset/js/ai"
 os.makedirs('dataset/js/ai', exist_ok=True)
 
 
-# generated this using chatgpt, for html this time, i know there was a better way to do this.
+
+
+# generated this using chatgpt, for js this time, i know there was a better way to do this.
 prompts = [
     "write a JavaScript todo list web app",
     "generate a weather app using JavaScript",
@@ -322,6 +324,106 @@ prompts = [
     "make a stopwatch with animated digits in JavaScript",
     "build a todo list with recurring reminders in JS",
     "generate a weather forecast comparison tool in JavaScript",
+    "make a countdown timer with custom alarm sounds in JavaScript",
+    "build a shopping cart with coupon support in JS",
+    "generate a fitness tracker with daily goals in JavaScript",
+    "create a subscription form with email validation in JS",
+    "build a chat widget with emoji support in JavaScript",
+    "make a memory matching card game in JS",
+    "create a portfolio site with dark mode toggle in JavaScript",
+    "generate a budget planner with pie charts in JS",
+    "design a testimonial slider for landing pages in JavaScript",
+    "write a poll creator with real-time results in JS",
+    "produce a file uploader with drag-and-drop in JavaScript",
+    "create a quiz app with leaderboard in JS",
+    "build a notes app with markdown support in JavaScript",
+    "generate a movie search app using OMDB API in JS",
+    "implement a password generator with options in JavaScript",
+    "write a task prioritization board (kanban) in JS",
+    "create a stopwatch with lap recording in JavaScript",
+    "make a music playlist manager with tags in JS",
+    "build a recipe finder with ingredient filtering in JavaScript",
+    "generate a language flashcard app in JS",
+    "create a job application tracker with status updates in JavaScript",
+    "build a travel itinerary planner in JS",
+    "make a virtual pet game with animations in JavaScript",
+    "create a photo gallery with infinite scroll in JS",
+    "generate an expense tracker with monthly summaries in JavaScript",
+    "design a sticky notes board with color options in JS",
+    "write a resume builder with downloadable PDF in JavaScript",
+    "produce a multi-step form with progress in JS",
+    "create a habit tracker with streaks in JavaScript",
+    "build a fitness class schedule app in JS",
+    "generate a team member directory with search in JavaScript",
+    "implement a countdown for product launches in JS",
+    "write a code snippet sharing tool with syntax highlighting in JavaScript",
+    "create a random quote generator with API in JS",
+    "make a fun trivia game with score tracking in JavaScript",
+    "build a time zone converter in JS",
+    "generate a food delivery order summary in JavaScript",
+    "create a dynamic FAQ accordion in JS",
+    "build a notification bell with unread count in JavaScript",
+    "make a blog post comment system in JS",
+    "create a weather widget with hourly forecast in JavaScript",
+    "generate a stock price chart with live updates in JS",
+    "design a multi-language greeting app in JavaScript",
+    "write a digital clock with customizable backgrounds in JS",
+    "produce a typing speed test app in JavaScript",
+    "create a map with custom markers in JS",
+    "build a currency converter with historical rates in JavaScript",
+    "generate a school grade calculator in JS",
+    "implement a random password strength checker in JavaScript",
+    "write a browser tab manager with grouping in JS",
+    "create a e-commerce product filter in JavaScript",
+    "make a meme generator with text overlays in JS",
+    "build a live sports score tracker in JavaScript",
+    "generate a book search app with rating filters in JS",
+    "create a calendar with color-coded events in JavaScript",
+    "build an expense report generator in JS",
+    "make a file encryption demo in JavaScript",
+    "create a responsive navigation drawer in JS",
+    "generate a playlist shuffler in JavaScript",
+    "design a simple CRM dashboard in JS",
+    "write a onboarding wizard with tooltips in JavaScript",
+    "produce a recipe ingredient scaler in JS",
+    "create a random joke app in JavaScript",
+    "build a time tracker for work tasks in JS",
+    "generate a virtual dice roller in JavaScript",
+    "implement a study timer with break reminders in JS",
+    "write an image compressor in JavaScript",
+    "create a live poll voting widget in JS",
+    "make a portfolio project grid with filters in JavaScript",
+    "build a text-to-speech demo in JS",
+    "generate a random color palette generator in JavaScript",
+    "create a markdown editor with preview in JS",
+    "build a responsive testimonial carousel in JavaScript",
+    "make a simple online whiteboard in JS",
+    "create a QR code generator in JavaScript",
+    "generate a personal budget visualizer in JS",
+    "design a streaming countdown overlay in JavaScript",
+    "write a chessboard renderer with move highlights in JS",
+    "produce a virtual bookshelf with categories in JS",
+    "create a sticky header for scrolling pages in JavaScript",
+    "build a feedback form with star rating in JS",
+    "generate a contact import/export tool in JavaScript",
+    "implement a site uptime monitor in JS",
+    "write a goal-setting app with reminders in JavaScript",
+    "create a code challenge leaderboard in JS",
+    "make a text formatter with presets in JavaScript",
+    "build a business hours display widget in JS",
+    "generate a classroom attendance checker in JavaScript",
+    "create an online raffle draw picker in JS",
+    "build a flash sale countdown banner in JavaScript",
+    "make a random team generator for events in JS",
+    "create a live visitor counter for websites in JavaScript",
+    "generate a daily motivational message app in JS",
+    "design a custom alert system for forms in JavaScript",
+    "write an API data visualizer with charts in JS",
+    "produce a responsive landing page hero section in JavaScript",
+    "create a password protected notes app in JS",
+    "build a restaurant menu with filter options in JavaScript",
+    "generate a shift schedule planner in JS",
+    "implement a user registration flow with validation in JavaScript"
 ]
 
 def get_code(code):
@@ -332,11 +434,11 @@ def get_code(code):
 
 model = ai.GenerativeModel('gemini-1.5-flash')
 
-for ind, prompt in enumerate(prompts[144:501], start=145):
+for ind, prompt in enumerate(prompts[359:501], start=360):
     try:
         combined_prompt = """You are a code generator, provide ONLY the final JavaScript code, dont provide any explanations, or notes. provide comments in the code explaining it. User Request: """ + prompt
         
-        # time.sleep(1)
+        time.sleep(1)
 
         response = model.generate_content(combined_prompt)
         raw = response.text
