@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+  <title>slop_detector1020</title>
+</head>
+<body>
+  <div class="main">
+    <h1>slop_detector1020</h1>
+    <h5>an ai code detector</h5>
+    <h2>did <i>you</i> write your code?</h2>
+    <p class="subtitle">currently only JS, TS and Python supported</p>
+    <form method="post" enctype="multipart/form-data" class="upload">
+      <div class="form">
+        <div class="file-input-wrapper">
+          <input type="file" name="file" id="file" accept=".js,.py,.ts" class="file-input">
+          <label for="file" class="file-label">
+            <span class="file-text">Choose a file</span>
+          </label>
+        </div>
+        <input type="submit" value="Detect" id="detect">
+      </div>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class="flash">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+    </form>
+    {% if result %}
+      <div class="result">
+        <strong>{{ result }}</strong>        
+      </div>
+    {% endif %}
+  </div>
+
+  <script>
+    document.getElementById('file').addEventListener('change', function(e) {
+      const fileName = e.target.files[0] ? e.target.files[0].name : 'choose a file';
+      document.querySelector('.file-text').textContent = fileName;
+    });
+  </script>
+</body>
+</html>
