@@ -12,4 +12,5 @@ i decided to make a flask app, since it would be more accessible, for that, i ju
 if you're interested, you can also check out the notes.md!
 
 # try it out
-the flask app is hosted on [nest]("https://slop.divpr.hackclub.app")
+the flask app is hosted on [nest](https://slop.divpr.hackclub.app)
+
